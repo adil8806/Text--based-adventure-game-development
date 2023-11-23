@@ -1,0 +1,58 @@
+import time
+
+def introduction():
+    print("Welcome to the Adventure Game!")
+    time.sleep(1)
+    print("You find yourself in a mysterious land.")
+
+def choose_path():
+    print("Choose your path:")
+    print("1. Follow the dark forest.")
+    print("2. Cross the ancient bridge.")
+    return input("Enter 1 or 2: ")
+
+def dark_forest():
+    print("You enter the dark forest...")
+    time.sleep(1)
+    print("You encounter a wild beast!")
+    time.sleep(1)
+    print("What will you do?")
+    print("1. Fight the beast.")
+    print("2. Try to run away.")
+    choice = input("Enter 1 or 2: ")
+
+    if choice == "1":
+        print("You fought bravely, but the beast was too strong. Game over.")
+    elif choice == "2":
+        print("You manage to escape. Well done!")
+
+def ancient_bridge():
+    print("You decide to cross the ancient bridge...")
+    time.sleep(1)
+    print("The bridge is creaky, but you make it to the other side.")
+    time.sleep(1)
+    print("You see a mysterious door.")
+    time.sleep(1)
+    print("What will you do?")
+    print("1. Open the door.")
+    print("2. Walk away.")
+    choice = input("Enter 1 or 2: ")
+
+    if choice == "1":
+        print("Congratulations! You have successfully completed the adventure.")
+    elif choice == "2":
+        print("You decide not to open the door and continue your journey.")
+
+def main():
+    introduction()
+    path = choose_path()
+
+    if path == "1":
+        dark_forest()
+    elif path == "2":
+        ancient_bridge()
+    else:
+        print("Invalid choice. Game over.")
+
+if __name__ == "__main__":
+    main()
